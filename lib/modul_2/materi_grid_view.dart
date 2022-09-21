@@ -5,24 +5,23 @@ class MateriGridView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Grid View"),
-        ),
-        body: GridView(
-            // GridDelegate untuk memberi batasan berapa banyak item pada satu baris pada grid
-            // Disini contoh batasannya adalah 3
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
-            children: [
-              FlutterLogo(),
-              FlutterLogo(),
-              FlutterLogo(),
-              FlutterLogo(),
-              FlutterLogo(),
-              FlutterLogo(),
-            ],
-        ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Grid View"),
+      ),
+      body: GridView(
+        // GridDelegate untuk memberi batasan berapa banyak item pada satu baris pada grid
+        // Disini contoh batasannya adalah 3
+        gridDelegate:
+            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+        children: [
+          FlutterLogo(),
+          FlutterLogo(),
+          FlutterLogo(),
+          FlutterLogo(),
+          FlutterLogo(),
+          FlutterLogo(),
+        ],
       ),
     );
   }
