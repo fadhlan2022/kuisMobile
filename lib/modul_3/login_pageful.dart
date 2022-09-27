@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:praktikum_mobile_si/modul_4/second_screen.dart';
+
+import '../modul_4/main_screen.dart';
 
 class LoginPageFul extends StatefulWidget {
   const LoginPageFul({Key? key}) : super(key: key);
@@ -119,27 +122,35 @@ class _LoginPageFulState extends State<LoginPageFul> {
         ),
         child: Text("Login"),
         onPressed: (){
-          String text = "";
-          if(username == "flutterMobile" && password == "flutter123"){
-            setState(() {
-              text = "Login Success";
-              isLoginSuccess = true;
-            });
-          }
-          else{
-            setState(() {
-              text = "Login Failed";
-              isLoginSuccess = false;
-            });
-          }
+          // String text = "";
+          // if(username == "flutterMobile" && password == "flutter123"){
+          //   setState(() {
+          //     text = "Login Success";
+          //     isLoginSuccess = true;
+          //   });
+          // }
+          // else{
+          //   setState(() {
+          //     text = "Login Failed";
+          //     isLoginSuccess = false;
+          //   });
+          // }
+          //
+          // SnackBar snackBar = SnackBar(
+          //   content: Text(text),
+          // );
+          //
+          // ScaffoldMessenger.of(context).showSnackBar(snackBar);
 
-          SnackBar snackBar = SnackBar(
-            content: Text(text),
-          );
-
-          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
+            // return SecondScreen(Username: Username);
+            return MainScreen();
+          }));
         },
       ),
     );
   }
+
+
+
 }
